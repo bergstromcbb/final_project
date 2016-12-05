@@ -62,7 +62,7 @@ app.controller('displayFood', function($scope, recipeStore){
 //API key FoodToFork---> 873e64556154738153c31e102ea6836f 
 
 // var xhr = new XMLHttpRequest();
-
+ 
 // xhr.onload = function() {
 //   if (xhr.status === 200) {
 //     console.log(xhr.status);
@@ -85,10 +85,24 @@ request.onreadystatechange = function() {
         }
     }
 };
-request.open("GET", 'http://food2fork.com/api/get?key=873e64556154738153c31e102ea6836f', true);
-//http://food2fork.com/api/search?key=873e64556154738153c31e102ea6836f 
-//http://food2fork.com/api/get?key=873e64556154738153c31e102ea6836f
-//http://www.recipepuppy.com/api/
+
+request.open("GET", "https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/food/jokes/random", true);
+
+request.setRequestHeader("X-Mashape-Key", "Qajqo1J4xdmshNRgkEbboXTYJFJYp19ne8jjsnq96e872bitro");
+
+// var unirest = require('unirest');
+
+// var Request = unirest.get('https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/food/jokes/random');
+
+// //http://food2fork.com/api/search?key=873e64556154738153c31e102ea6836f 
+// unirest.get("https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/food/jokes/random")
+// .header("X-Mashape-Key", "Qajqo1J4xdmshNRgkEbboXTYJFJYp19ne8jjsnq96e872bitro")
+// .header("Accept", "application/json")
+// .end(function (result) {
+//   console.log(result.status, result.headers, result.body);
+// });
+// //http://food2fork.com/api/get?key=873e64556154738153c31e102ea6836f
+// //http://www.recipepuppy.com/api/
 request.send(null);
 
 
