@@ -11,6 +11,10 @@ body {
 	margin: auto;
 }
 
+a{
+	margin: 10px;
+}
+
 input {
 	height: 3vw;
 	width: 25vw;
