@@ -1,1 +1,32 @@
-<p>is</p>
+
+
+<head ng-app="recipeCook">
+	<title>Let's see what we have</title>
+</head>
+<body>
+	<div class="anything">
+		<section id="insideContainer">
+			<h1>what ingredients do you have:</h1>
+			<form>
+				<p>
+					<input class="box" type="text" placeholder="what protein" ng-model="recipeData.protein">
+				</p>
+				<p>
+					<input class="box" type="text" placeholder="what vegetable" ng-model="recipeData.vegetable">
+				</p>
+				<p>
+					<input class="box" type="text" placeholder="what starch" ng-model="recipeData.starch">
+				</p>
+				<p>
+					<button type="submit" ng-click="onclick(foodsToAdd)">
+						Add something NEW
+					</button>
+				</p>
+			</form>
+		</section></div>
+
+
+		<script src="angular.min.js"></script>
+		<script src="script.js"></script>
+	</body>
+	</html>
