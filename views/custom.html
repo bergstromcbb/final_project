@@ -1,8 +1,33 @@
-<p>is</p>
 
 
-<!-- this is an example VVVV -->
+<head ng-app="recipeCook">
+	<title>Let's see what we have</title>
+</head>
+<body>
+	<div class="anything">
+		<section id="insideContainer">
+			<h2>what ingredients do you have:</h2>
+			<form>
+				<p>
+					<input class="box" type="text" placeholder="what protein" ng-model="recipeData.protein">
+				</p>
+				<p>
+					<input class="box" type="text" placeholder="what vegetable" ng-model="recipeData.vegetable">
+				</p>
+				<p>
+					<input class="box" type="text" placeholder="what starch" ng-model="recipeData.starch">
+				</p>
+				<p>
+					<button type="submit" ng-click="onclick(foodsToAdd)">
+						Add something NEW
+					</button>
+				</p>
+			</form>
+		</section></div>
 
-<div>
-	<form action="http://www.recipepuppy.com/" method="get" style="font-size:10px;"><b style="font-size:14px;">Recipe Search by Ingredients:</b><input type="text" name="i" id="i" value="Enter ingredients separated by commas" size=31 style="color:gray;font-size:11px;" onfocus="if(this.style.color=='gray'){this.style.color='black';this.value='';}" onblur="if(this.value==''){this.style.color='gray';this.value='Enter ingredients separated by commas';}" /><input type="submit" value="Search" style="font-size:11px;" /><br/>Powered by <a href="http://www.recipepuppy.com" style="font-size:10px;">Recipe Puppy</a></form>
-</div>
+
+		<script src="angular.min.js"></script>
+		<script src="script.js"></script>
+	</body>
+	</html>
+
