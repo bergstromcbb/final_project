@@ -54,6 +54,15 @@ app.controller('displayFood', function($scope, recipeStore){
   $scope.recipe = recipe;
 });
 
+
+
+////start the api controller
+app.controller('displayJoke', function($http){
+  var joke = recipeJoke.getRecipe();
+
+  $scope.recipe = recipe;
+});
+
 })();
 
 
@@ -62,7 +71,7 @@ app.controller('displayFood', function($scope, recipeStore){
 //API key FoodToFork---> 873e64556154738153c31e102ea6836f 
 
 // var xhr = new XMLHttpRequest();
- 
+
 // xhr.onload = function() {
 //   if (xhr.status === 200) {
 //     console.log(xhr.status);
@@ -74,38 +83,40 @@ app.controller('displayFood', function($scope, recipeStore){
 // xhr.open('GET', 'https://www.reddit.com/r/aww/.json', true);
 // xhr.send(null);
 
-var request = new XMLHttpRequest();
-request.onreadystatechange = function() {
-    if (request.readyState === 4) {
-        if (request.status === 200) {
+// var request = new XMLHttpRequest();
+// request.onreadystatechange = function() {
+//     if (request.readyState === 4) {
+//         if (request.status === 200) {
+//             document.body.className = 'ok';
+//             console.log(request.responseText);
+//         } else {
+//             document.body.className = 'error';
+//         }
+//     }
+// };
+
+// request.open("GET", "https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/food/jokes/random", true);
+
+// request.setRequestHeader("X-Mashape-Key", "Qajqo1J4xdmshNRgkEbboXTYJFJYp19ne8jjsnq96e872bitro");
+
+// request.send(null);
+
+
+//////////////////////////////make controller and have angular inject $http server into it
+//then add controller to page.
+
+$http({
+  method: 'GET',
+  url: 'https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/food/jokes/random',
+  headers: {
+   'X-Mashape-Key': "Qajqo1J4xdmshNRgkEbboXTYJFJYp19ne8jjsnq96e872bitro"
+    }
+}).then(function successCallback(response) {
             document.body.className = 'ok';
             console.log(request.responseText);
-        } else {
+  }, function errorCallback(response) {
             document.body.className = 'error';
-        }
-    }
-};
-
-request.open("GET", "https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/food/jokes/random", true);
-
-request.setRequestHeader("X-Mashape-Key", "Qajqo1J4xdmshNRgkEbboXTYJFJYp19ne8jjsnq96e872bitro");
-
-// var unirest = require('unirest');
-
-// var Request = unirest.get('https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/food/jokes/random');
-
-// //http://food2fork.com/api/search?key=873e64556154738153c31e102ea6836f 
-// unirest.get("https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/food/jokes/random")
-// .header("X-Mashape-Key", "Qajqo1J4xdmshNRgkEbboXTYJFJYp19ne8jjsnq96e872bitro")
-// .header("Accept", "application/json")
-// .end(function (result) {
-//   console.log(result.status, result.headers, result.body);
-// });
-// //http://food2fork.com/api/get?key=873e64556154738153c31e102ea6836f
-// //http://www.recipepuppy.com/api/
-request.send(null);
-
-
+  });
 
 
 
