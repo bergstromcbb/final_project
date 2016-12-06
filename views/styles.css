@@ -81,19 +81,7 @@ button {
 	background-image: url("../images/background6.png");
 	background-size: cover;
 }
-.navigation a {
-	text-decoration: none;
-	font-size: 30px;
-	color: #606060;
-}
 
-.navigation a:hover {
-	color: #7c7c7c;
-}
-
-footer {
-	font-size: 20px;
-}
 
 #instruction {
 	font-size: 20px;
