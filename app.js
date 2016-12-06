@@ -59,6 +59,9 @@ app.controller('displayFood', function($scope, recipeStore){
 
 });
 
+<<<<<<< HEAD
+
+
 app.controller('displayJoke', function($scope, $http){
 
 $http({
@@ -88,8 +91,8 @@ $http({
             document.body.className = 'ok';
             $scope.recipes = response.data.recipes.map(function(recipe){
                 return {
-                    title: recipe.title, 
-                    image: recipe.image, 
+                    title: recipe.title,
+                    image: recipe.image,
                     time: recipe.readyInMinutes,
                     ingredients: recipe.extendedIngredients.map(function(ingredient){
                         return {
@@ -121,6 +124,18 @@ $http({
 //     }
 // };
 
+<<<<<<< HEAD
+// //http://food2fork.com/api/search?key=873e64556154738153c31e102ea6836f
+// unirest.get("https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/food/jokes/random")
+// .header("X-Mashape-Key", "Qajqo1J4xdmshNRgkEbboXTYJFJYp19ne8jjsnq96e872bitro")
+// .header("Accept", "application/json")
+// .end(function (result) {
+//   console.log(result.status, result.headers, result.body);
+// });
+// //http://food2fork.com/api/get?key=873e64556154738153c31e102ea6836f
+// //http://www.recipepuppy.com/api/
+request.send(null);
+=======
 // request.open("GET", "https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/food/jokes/random", true);
 
 // request.setRequestHeader("X-Mashape-Key", "Qajqo1J4xdmshNRgkEbboXTYJFJYp19ne8jjsnq96e872bitro");
@@ -130,3 +145,4 @@ $http({
 
 /////////*********???????????????////////////
 
+>>>>>>> 2d360584a2b3b246fbce98232f2c2169419d2843

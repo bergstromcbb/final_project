@@ -1,14 +1,10 @@
 <div ng-repeat="recipe in recipes">
-
 <p>{{recipe.title}}</p>
-
 <img ng-src="{{recipe.image}}"/>
-
 <p>{{recipe.time}}
 <ul>
-	<li ng-repeat="ingredient in recipe.ingredients">
-		{{ingredient.name}}
-	</li>
+    <li ng-repeat="ingredient in recipe.ingredients">
+        {{ingredient.name}}
+    </li>
 </ul>
-
 </div>
