@@ -12,3 +12,4 @@ gulp.task('browser-sync', function(){
 	});
 	gulp.watch('./views/*.html').on('change', browserSync.reload);
 });
+
