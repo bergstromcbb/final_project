@@ -24,7 +24,7 @@ app.config(function($routeProvider) {
 });
 
 app.factory("recipeStore", function(){
-    var recipe={};
+    var recipe=[];
     return{
         setRecipe: function(food){
             recipe = food;
@@ -80,15 +80,26 @@ app.controller('displayRecipes', function($scope, $http){
 
 $http({
   method: 'GET',
-  url: 'https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/random?limitLicense=false&number=5',
+  url: 'https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/random?limitLicense=false&number=' + '5',
   headers: {
    'X-Mashape-Key': "Qajqo1J4xdmshNRgkEbboXTYJFJYp19ne8jjsnq96e872bitro"
     }
 }).then(function successCallback(response) {
             document.body.className = 'ok';
-            $scope.recipes = response.data.recipes.map(function(recipe){return {title: recipe.title, 
-                image: recipe.image, time: recipe.readyInMinutes}});
+            $scope.recipes = response.data.recipes.map(function(recipe){
+                return {
+                    title: recipe.title, 
+                    image: recipe.image, 
+                    time: recipe.readyInMinutes,
+                    ingredients: recipe.extendedIngredients.map(function(ingredient){
+                        return {
+                            name: ingredient.originalString
+                        };
+                    })
+                };
+            });
             console.log(response.data);
+            console.log($scope.recipes)
   }, function errorCallback(response) {
             document.body.className = 'error'
         });
