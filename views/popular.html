@@ -1,16 +1,21 @@
-<p>hey</p>
 
 <div ng-repeat="recipe in recipes">
 
-<p>{{recipe.title}}</p>
+<div class="backgroundpop">
+<section class="popular" ng-repeat="recipe in recipes">
+<div class="img">
+	<img class="popimg" ng-src="{{recipe.image}}"/>
+</div>
 
-<img ng-src="{{recipe.image}}"/>
 
-<p>{{recipe.time}}
-<ul>
-	<li ng-repeat="ingredient in recipe.ingredients">
-		{{ingredient.name}}
-	</li>
-</ul>
+<div class="header">
+	<h1>{{recipe.title}}</h1>
 
 </div>
+
+
+<div class="description">
+	<h3>Total Recipe Time: {{recipe.time}} </h3>
+	
+</div>
+</section>
