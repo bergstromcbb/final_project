@@ -1,20 +1,24 @@
+<p>boymom</p>
 
 
 <div class="backgroundpop">
-<section class="popular" ng-repeat="recipe in recipes">
-<div class="img">
-	<img class="popimg" ng-src="{{recipe.image}}"/>
-</div>
-
-
-<div class="header">
-	<h1>{{recipe.title}}</h1>
-
-</div>
-
-
-<div class="description">
-	<h3>Total Recipe Time: {{recipe.time}} </h3>
 	
+	<section class="popular" ng-repeat="recipe in recipes">
+		
+		<div class="img">
+			<img class="popimg" ng-src="{{recipe.image}}"/>
+		</div>
+
+
+		<div class="header">
+			<h1>{{recipe.title}}</h1>
+		</div>
+
+
+		<div class="description">
+			<h3>Total Recipe Time: {{recipe.time}} </h3>
+		</div>
+	
+	</section>
+
 </div>
-</section>
