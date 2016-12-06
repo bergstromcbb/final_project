@@ -1,7 +1,7 @@
 body {
 	font-family: 'Abril Fatface', cursive;
 	text-align: center;
-	background-image: url("../images/background5.png");
+	/* background-image: url("../images/background5.png"); */
 	font-size: 3vw;
 }
 
@@ -24,3 +24,67 @@ button {
 	height: 3vw;
 	width: 18vw;
 }
+
+
+/*popular page*/
+
+.popimg{
+	border-radius: 50%; 
+	width: 20%;
+
+}
+
+
+.img{
+	/*float: left;*/
+}
+
+.header{
+	clear: right;
+	font-family: arial;
+}
+
+.description{
+	clear: right;
+	font-family: arial;
+}
+
+
+.popular{
+	background-color: rgba(255,255,255,0.5);
+	border-radius: 25px;
+	width: 75%;
+	margin: auto;
+	padding: 2vw;
+	padding-top: 2vw;
+	margin-top: 2vw;
+	margin-bottom: 2vw;
+}
+
+.backgroundpop{
+	background-image: url("../images/background4.png");
+	margin-top: 
+}
+
+.custom{
+	background-color: rgba(255,255,255,0.5);
+	border-radius: 25px;
+	width: 75%;
+	margin: auto;
+	padding: 2vw;
+	padding-top: 2vw;
+	margin-top: 2vw;
+	margin-bottom: 2vw;
+}
+
+.backgroundcust{
+	background-image: url("../images/background6.png");
+	background-size: cover;
+}
+
+
+
+
+
+
+
