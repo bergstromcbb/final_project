@@ -13,6 +13,4 @@ gulp.task('browser-sync', function(){
 	gulp.watch('./views/*.html').on('change', browserSync.reload);
 });
 
-
-
-// kyle was here
+// kyle
