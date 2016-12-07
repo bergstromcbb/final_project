@@ -94,6 +94,20 @@ button {
 	box-shadow: 2.5px 2.5px 3px #c9c9c9;
 }
 
+footer {
+	font-size: 20px;
+}
+
+.navigation a {
+ 	text-decoration: none;
+ 	font-size: 30px;
+ 	color: #606060;
+ }
+ 
+ .navigation a:hover {
+ 	color: #7c7c7c;
+ }
+
 
 
 
