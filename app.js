@@ -22,8 +22,8 @@ app.config(function($routeProvider) {
     controller:""
   });
   $routeProvider.otherwise({
-        redirectTo: "/splash"
-    });
+    redirectTo: "/splash"
+  });
 
 });
 
@@ -48,43 +48,54 @@ app.controller('enterFood', function($scope, recipeStore){
     var recipe = $scope.recipeData;
 
     var foodsToMatch = [recipe.protein, recipe.vegetable, recipe.starch];
-
-    recipeStore.setRecipe(recipe);
+    
+    recipeStore.setRecipe(foodsToMatch);
 
     console.log(foodsToMatch);
+
     location.hash = "/results";
   };
 
 });
 
 app.controller('displayFood', function($scope, recipeStore, $http){
+
   var recipe = recipeStore.getRecipe();
 
   $scope.recipe = recipe;
 
+  var foodSearchString = recipe.join(",");
+
+  console.log(foodSearchString);
+
   $http({
     method: 'GET',
-    url: "testInfo.json"
-  // 'https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/random?limitLicense=false&number=5',
+    url: 
+    "testInfo.json"
+  // 'https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/findByIngredients' + 
+  // '?fillIngredients=false&ingredients=' + encodeURIComponent(foodSearchString)  +'&limitLicense=false&number=5&ranking=1',
+
   // headers: {
-  //  'X-Mashape-Key': "Qajqo1J4xdmshNRgkEbboXTYJFJYp19ne8jjsnq96e872bitro"
-  //   }
- }).then(function successCallback(response) {
+   // 'X-Mashape-Key': "Qajqo1J4xdmshNRgkEbboXTYJFJYp19ne8jjsnq96e872bitro"
+    // }
+}).then(function successCallback(response) {
   document.body.className = 'ok';
-  $scope.recipes = response.data.recipes.map(function(recipe){
+console.log(response);
+  $scope.entries = response.data.map(function(recipe){
     return {
       title: recipe.title,
       image: recipe.image,
-      time: recipe.readyInMinutes,
-      ingredients: recipe.extendedIngredients.map(function(ingredient){
-        return {
-          name: ingredient.originalString
-        };
-      })
+      link: recipe.link,
+      // time: recipe.readyInMinutes,
+      // ingredients: recipe.extendedIngredients.map(function(ingredient){
+      //   return {
+      //     name: ingredient.originalString
+      //   };
+      // })
     };
   });
-  console.log(response.data);
-  console.log($scope.recipes);
+  
+  console.log($scope.entries);
 }, function errorCallback(response) {
   document.body.className = 'error';
 });
