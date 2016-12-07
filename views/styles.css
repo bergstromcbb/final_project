@@ -20,6 +20,9 @@ body {
 
 .eachButt {
 	width: 30%;
+	display: inline;
+	border-color: black;
+	border-style: solid;
 }
 
 .homebutt {
@@ -115,6 +118,7 @@ html, body {
 	background-image: url("../images/background6.png");
 	margin-top: -10vw;
 	padding-top: 10vw;
+
 }
 
 .backgroundpair{
@@ -148,8 +152,9 @@ footer {
  	color: #7c7c7c;
  }
 
-
-
-
+.custdir {
+	height: 100%;
+	width: 100%;
+}
 
 
