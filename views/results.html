@@ -1,13 +1,12 @@
-<div>
+<div class="backgroundcust">
 
  <h2>You have the following ingredients:</h2>
 
-<p>{{recipe.protein}}</p>
-
-{{recipe.}}
-
-<p>{{recipe.vegetable}}</p>
-
-<p>{{recipe.starch}}</p>
+<p>{{recipe[0]}}, {{recipe[1]}}, {{recipe[2]}}</p>
+<div ng-repeat="entry in entries">
+{{entry.title}}
+<img src="{{entry.image}}">
+</div>
+<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
 
 </div>
