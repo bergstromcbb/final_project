@@ -74,11 +74,11 @@ app.controller('displayFood', function($scope, recipeStore, $http){
     "testInfo.json"
   // 'https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/findByIngredients' + 
   // '?fillIngredients=false&ingredients=' + encodeURIComponent(foodSearchString)  +'&limitLicense=false&number=5&ranking=1',
-
   // headers: {
    // 'X-Mashape-Key': "Qajqo1J4xdmshNRgkEbboXTYJFJYp19ne8jjsnq96e872bitro"
     // }
 }).then(function successCallback(response) {
+
   document.body.className = 'ok';
 console.log(response);
   $scope.entries = response.data.map(function(recipe){
@@ -102,7 +102,6 @@ console.log(response);
 
 
 });
-
 
 app.controller('displayJoke', function($scope, $http){
 
@@ -158,3 +157,4 @@ app.controller('displayRecipes', function($scope, $http){
 });
 
 });
+

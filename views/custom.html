@@ -3,20 +3,21 @@
 
 	<div class="backgroundcust" >
 		<section class="custom">
-			<h2>what ingredients do you have?</h2>
+			<h2>Which ingredients do you have?</h2>
+			<p id="instruction">Choose a few ingredients and search for a recipe.</p>
 			<form>
 				<p>
-					<input class="box" type="text" placeholder="what protein" ng-model="recipeData.protein">
+					<input class="box" type="text" placeholder="Add a protein" ng-model="recipeData.protein">
 				</p>
 				<p>
-					<input class="box" type="text" placeholder="what vegetable" ng-model="recipeData.vegetable">
+					<input class="box" type="text" placeholder="Add a vegetable" ng-model="recipeData.vegetable">
 				</p>
 				<p>
-					<input class="box" type="text" placeholder="what starch" ng-model="recipeData.starch">
+					<input class="box" type="text" placeholder="Add a starch" ng-model="recipeData.starch">
 				</p>
 				<p>
-					<button type="submit" ng-click="onclick(foodsToAdd)">
-						Add something NEW
+					<button class="submitbtn" type="submit" ng-click="onclick(foodsToAdd)">
+						Find a recipe!
 					</button>
 				</p>
 			</form>
