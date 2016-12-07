@@ -59,8 +59,9 @@ html, body {
 
 
 .img{
-	/*float: left;*/
+	width: 100%;
 }
+
 
 .header{
 	clear: right;
