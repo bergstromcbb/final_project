@@ -9,21 +9,19 @@
 </head>
 <body>
 
- <nav>
  	<div class="navigation">
+        <a href="#/splash">Home</a>
         <a href="#/popular">Popular Recipes</a>
         <a href="#/custom">Custom Recipes</a>
         <a href="#/pairings">Food Pairings</a>
   	</div>
- </nav>
-    <header ng-view=""></header>
+    <div id="viewWindow" ng-view=""></div>
 
-    <script src="https://code.jquery.com/jquery-1.11.3.js"></script>
+    <script src="library/jquery-1.11.1.js"></script>
  	<script src="library/angular.min.js"></script>
     <script src="library/angular-route.min.js"></script>
     <script src="app.js"></script>
-    <script src="gulp.js"></script>
-
+    <!-- <script src="gulpfile.js"></script> -->
 
 
 </body>
