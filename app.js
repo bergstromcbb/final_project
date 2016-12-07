@@ -96,6 +96,7 @@ app.controller('displayFood', function($scope, recipeStore, $http){
       $scope.recipeArray.push(recipeObj);     
       getRecipe(recipeObj.id);
     });
+
   
     // $scope.entries = response.data.map(function(recipe){
     //   recipeId = recipe.id;
@@ -138,10 +139,11 @@ app.controller('displayJoke', function($scope, $http){
 
   $http({
     method: 'GET',
-    url: "testInfo.json"
+    url: 
+    "testInfo.json"
   // 'https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/food/jokes/random',
   // headers: {
-  //  'X-Mashape-Key': "Qajqo1J4xdmshNRgkEbboXTYJFJYp19ne8jjsnq96e872bitro"
+  //  'X-Mashape-Key': "mB6qAXcS2dmshYvx3CSdxbUsZFbbp1qpWv1jsnGXmktEnkbIl4"
   //   }
 }).then(function successCallback(response) {
   document.body.className = 'ok';
@@ -158,15 +160,12 @@ app.controller('displayRecipes', function($scope, $http){
 
   $http({
     method: 'GET',
-    url: "testInfo.json"
+    url: 
+    "testInfo.json"
   // 'https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/random?limitLicense=false&number=5',
   // headers: {
-  //  'X-Mashape-Key': "Qajqo1J4xdmshNRgkEbboXTYJFJYp19ne8jjsnq96e872bitro"
+  //  'X-Mashape-Key': "mB6qAXcS2dmshYvx3CSdxbUsZFbbp1qpWv1jsnGXmktEnkbIl4"
   //   }
-  // url: 
-  // 'https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/random?limitLicense=false&number=5',
-  // headers: {
-   // 'X-Mashape-Key': "Qajqo1J4xdmshNRgkEbboXTYJFJYp19ne8jjsnq96e872bitro"
  }).then(function successCallback(response) {
   document.body.className = 'ok';
   $scope.recipes = response.data.recipes.map(function(recipe){
