@@ -1,7 +1,7 @@
 body {
 	font-family: 'Abril Fatface', cursive;
 	text-align: center;
-	background-image: url("../images/background5.png"); 
+	background-image: url("../images/background5.png");
 	font-size: 3vw;
 	margin: 0;
 }
@@ -52,14 +52,14 @@ html, body {
 /*popular page*/
 
 .popimg{
-	border-radius: 50%; 
+	border-radius: 50%;
 	width: 20%;
 
 }
 
 
 .img{
-	/*float: left;*/
+	/*float: left;*/	
 }
 
 .header{
@@ -134,13 +134,7 @@ footer {
  	font-size: 30px;
  	color: #606060;
  }
- 
+
  .navigation a:hover {
  	color: #7c7c7c;
  }
-
-
-
-
-
-
