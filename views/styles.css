@@ -11,6 +11,16 @@ body {
     margin: auto;
     font-size: 20px;
 }
+
+.splashNav{
+	display: inline;
+	width: 50%;
+}
+
+.eachButt {
+	width: 30%;
+}
+
 .homebutt {
     width: 14%;
     border-radius: 50%;
