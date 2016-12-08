@@ -66,40 +66,72 @@ app.controller('displayFood', function($scope, recipeStore, $http){
 
   var foodSearchString = recipe.join(",");
 
+  $scope.recipeArray = [];
+
   console.log(foodSearchString);
 
   $http({
     method: 'GET',
     url: 
-    "testInfo.json"
-  // 'https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/findByIngredients' + 
-  // '?fillIngredients=false&ingredients=' + encodeURIComponent(foodSearchString)  +'&limitLicense=false&number=5&ranking=1',
-  // headers: {
-   // 'X-Mashape-Key': "Qajqo1J4xdmshNRgkEbboXTYJFJYp19ne8jjsnq96e872bitro"
-    // }
-}).then(function successCallback(response) {
+      // "testInfo.json"
+    'https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/findByIngredients' + 
+    '?fillIngredients=false&ingredients=' + encodeURIComponent(foodSearchString)  +'&limitLicense=false&number=5&ranking=1',
+    headers: {
+     'X-Mashape-Key': "Qajqo1J4xdmshNRgkEbboXTYJFJYp19ne8jjsnq96e872bitro"
+      }
+  }).then(function successCallback(response) {
 
-  document.body.className = 'ok';
-console.log(response);
-  $scope.entries = response.data.map(function(recipe){
-    return {
-      title: recipe.title,
-      image: recipe.image,
-      link: recipe.link,
-      // time: recipe.readyInMinutes,
-      // ingredients: recipe.extendedIngredients.map(function(ingredient){
-      //   return {
-      //     name: ingredient.originalString
-      //   };
-      // })
-    };
-  });
+    document.body.className = 'ok';
+
+    console.log(response);
+
+    response.data.forEach(function(recipe) {
+      console.log(recipe);
+      var recipeObj = {
+        title: recipe.title,
+        image: recipe.image,
+        id: recipe.id
+      };
+
+      $scope.recipeArray.push(recipeObj);     
+      getRecipe(recipeObj.id);
+    });
+
   
-  console.log($scope.entries);
-}, function errorCallback(response) {
-  document.body.className = 'error';
-});
+    // $scope.entries = response.data.map(function(recipe){
+    //   recipeId = recipe.id;
+    //   getRecipe(recipeId);
+    //   return {
+    //     title: recipe.title,
+    //     image: recipe.image,
+    //     id: recipe.id,
+    //   };
+    // });
+      console.log($scope.recipeArray);
+    //   console.log($scope.entries);
+    }, function errorCallback(response) {
+      document.body.className = 'error';
+    });
 
+  function getRecipe(recipeId) {
+    $http({
+      method: "GET",
+      url: 'https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/' + recipeId + '/information',
+      headers: {
+       'X-Mashape-Key': "Qajqo1J4xdmshNRgkEbboXTYJFJYp19ne8jjsnq96e872bitro"
+        }
+    }).then(function successCallback(recipeJson) {
+      var sourceUrl = recipeJson.data.sourceUrl;
+      $scope.recipeArray.forEach(function(recipe) {
+        console.log(recipe);
+        recipe.sourceUrl = sourceUrl;
+      })
+    });
+  }
+
+  setTimeout(function() {
+    console.log($scope.recipeArray);
+  }, 5000);
 
 });
 
@@ -107,10 +139,11 @@ app.controller('displayJoke', function($scope, $http){
 
   $http({
     method: 'GET',
-    url: "testInfo.json"
+    url: 
+    "testInfo.json"
   // 'https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/food/jokes/random',
   // headers: {
-  //  'X-Mashape-Key': "Qajqo1J4xdmshNRgkEbboXTYJFJYp19ne8jjsnq96e872bitro"
+  //  'X-Mashape-Key': "mB6qAXcS2dmshYvx3CSdxbUsZFbbp1qpWv1jsnGXmktEnkbIl4"
   //   }
 }).then(function successCallback(response) {
   document.body.className = 'ok';
@@ -127,15 +160,12 @@ app.controller('displayRecipes', function($scope, $http){
 
   $http({
     method: 'GET',
-    url: "testInfo.json"
+    url: 
+    "testInfo.json"
   // 'https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/random?limitLicense=false&number=5',
   // headers: {
-  //  'X-Mashape-Key': "Qajqo1J4xdmshNRgkEbboXTYJFJYp19ne8jjsnq96e872bitro"
+  //  'X-Mashape-Key': "mB6qAXcS2dmshYvx3CSdxbUsZFbbp1qpWv1jsnGXmktEnkbIl4"
   //   }
-  // url: 
-  // 'https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/random?limitLicense=false&number=5',
-  // headers: {
-   // 'X-Mashape-Key': "Qajqo1J4xdmshNRgkEbboXTYJFJYp19ne8jjsnq96e872bitro"
  }).then(function successCallback(response) {
   document.body.className = 'ok';
   $scope.recipes = response.data.recipes.map(function(recipe){
