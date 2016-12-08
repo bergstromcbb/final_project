@@ -3,26 +3,25 @@
 
 	<section class="popular" ng-repeat="recipe in recipes">
 		
-		<div class="img">
-			<img class="popimg" ng-src="{{recipe.image}}"/>
+		<div id="popRecipe">
+
+			<div class="leftColumn">
+				<img class="popImage" ng-src="{{recipe.image}}"/>
+			</div>
+
+
+			<div class="rightColumn">
+				<h1>{{recipe.title}}</h1>
+				<h3>Total Recipe Time: {{recipe.time}} </h3>
+			</div>
+		
 		</div>
-
-
-		<div class="header">
-			<h1>{{recipe.title}}</h1>
-		</div>
-
-
-		<div class="description">
-			<h3>Total Recipe Time: {{recipe.time}} </h3>
-		</div>
-	
 	</section>
 	<br />
 
-		<footer>
-        &copy; RecipeCook 2016
-   		 </footer>
+	<footer>
+		&copy; RecipeCook 2016
+	</footer>
 
 </div>
 
