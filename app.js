@@ -115,11 +115,11 @@ app.controller('displayFood', function($scope, recipeStore, $http){
 
   function getRecipe(recipeId) {
     $http({
-      // method: "GET",
+      method: "GET",
       // url: 'https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/' + recipeId + '/information',
-      // headers: {
-      //  'X-Mashape-Key': "Qajqo1J4xdmshNRgkEbboXTYJFJYp19ne8jjsnq96e872bitro"
-      //   }
+      headers: {
+       // 'X-Mashape-Key': "Qajqo1J4xdmshNRgkEbboXTYJFJYp19ne8jjsnq96e872bitro"
+        }
     }).then(function successCallback(recipeJson) {
       var sourceUrl = recipeJson.data.sourceUrl;
       $scope.recipeArray.forEach(function(recipe) {
