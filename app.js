@@ -73,12 +73,12 @@ app.controller('displayFood', function($scope, recipeStore, $http){
   $http({
     method: 'GET',
     url: 
-      // "testInfo.json"
-    'https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/findByIngredients' + 
-    '?fillIngredients=false&ingredients=' + encodeURIComponent(foodSearchString)  +'&limitLicense=false&number=5&ranking=1',
-    headers: {
-     'X-Mashape-Key': "Qajqo1J4xdmshNRgkEbboXTYJFJYp19ne8jjsnq96e872bitro"
-      }
+      "testInfo.json"
+    // 'https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/findByIngredients' + 
+    // '?fillIngredients=false&ingredients=' + encodeURIComponent(foodSearchString)  +'&limitLicense=false&number=5&ranking=1',
+    // headers: {
+    //  'X-Mashape-Key': "Qajqo1J4xdmshNRgkEbboXTYJFJYp19ne8jjsnq96e872bitro"
+    //   }
   }).then(function successCallback(response) {
 
     document.body.className = 'ok';
@@ -115,11 +115,11 @@ app.controller('displayFood', function($scope, recipeStore, $http){
 
   function getRecipe(recipeId) {
     $http({
-      method: "GET",
-      url: 'https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/' + recipeId + '/information',
-      headers: {
-       'X-Mashape-Key': "Qajqo1J4xdmshNRgkEbboXTYJFJYp19ne8jjsnq96e872bitro"
-        }
+      // method: "GET",
+      // url: 'https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/' + recipeId + '/information',
+      // headers: {
+      //  'X-Mashape-Key': "Qajqo1J4xdmshNRgkEbboXTYJFJYp19ne8jjsnq96e872bitro"
+      //   }
     }).then(function successCallback(recipeJson) {
       var sourceUrl = recipeJson.data.sourceUrl;
       $scope.recipeArray.forEach(function(recipe) {

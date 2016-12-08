@@ -1,8 +1,10 @@
 <div class="backgroundcust custdir">
 
- <h2>You have the following ingredients:</h2>
+ <h2>Ingredients you're using:</h2>
 
 <p>{{recipe[0]}}, {{recipe[1]}}, {{recipe[2]}}</p>
+
+<h2>Your recommended recipes are:</h2>
 <div ng-repeat="recipeInfo in recipeArray">
 <a href="{{recipeInfo.sourceUrl}}">{{recipeInfo.title}}
 <img src="{{recipeInfo.image}}"></a>
