@@ -16,7 +16,12 @@ a{
 }
 
 a:hover{
-    color: #7c7c7c;
+    color: #879ac3;
+
+}
+
+a:active{
+    color: #3b61b7;
 }
 
 .navigation {
@@ -136,8 +141,9 @@ button {
     padding-top: 2vw;
     margin-top: 3vw;
     margin-bottom: 3vw;
-    /*max-width: 850px;*/
+    max-width: 850px;
     box-shadow: 5px 5px 15px #606060;
+    text-align: center;
 }
 
 .custom{
@@ -199,6 +205,10 @@ footer{
 
 h1{
     font-size: 3vw;
+}
+
+.ingredients{
+    text-align: center;
 }
 
 h3{
