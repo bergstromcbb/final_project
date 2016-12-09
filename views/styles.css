@@ -11,7 +11,7 @@ body {
 
 a{
     text-decoration: none;
-    margin: 10px;
+    
 }
 
 .navigation {
@@ -37,6 +37,14 @@ a{
 
 .icon {
     height: 5vw;
+    position: relative;
+    top: 14px;
+}
+
+.socialIcon{
+    height: 5vw;
+    width: 5vw;
+
 }
 
 #splashNav{
@@ -131,8 +139,10 @@ button {
     margin: auto;
     padding: 2vw;
     padding-top: 2vw;
-    margin-top: 2vw;
-    margin-bottom: 2vw;
+    margin-top: 3vw;
+    margin-bottom: 3vw;
+    max-width: 850px;
+    box-shadow: 5px 5px 15px #606060;
 }
 
 .custom{
@@ -190,4 +200,12 @@ footer{
     text-align: center;
     margin: auto;
     font-size: 2.75vw;
+}
+
+h1{
+    font-size: 4vw;
+}
+
+h3{
+    font-size: 3vw;
 }
