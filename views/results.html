@@ -1,19 +1,19 @@
 <div class="backgroundcust custdir">
 
- <h2>Ingredients you're using:</h2>
+	<h2>Ingredients you're using:</h2>
 
-<p>{{recipe[0]}}, {{recipe[1]}}, {{recipe[2]}}</p>
+	<p>{{recipe[0]}}, {{recipe[1]}}, {{recipe[2]}}</p>
 
-<h2>Your recommended recipes are:</h2>
-<div ng-repeat="recipeInfo in recipeArray">
-<a href="{{recipeInfo.sourceUrl}}">{{recipeInfo.title}}
-<img src="{{recipeInfo.image}}"></a>
+	<h2>Your recommended recipes are:</h2>
+
+	<div ng-repeat="recipeInfo in recipeArray">
+		<a href="{{recipeInfo.sourceUrl}}">{{recipeInfo.title}}
+			<img src="{{recipeInfo.image}}">
+		</a>
+	</div>
+	
 </div>
-<!-- <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
- -->
-
-
-		<footer>
-        &copy; RecipeCook 2016
-   		 </footer>
-</div>
+<footer>
+	&copy; RecipeCook 2016
+</footer>
+	

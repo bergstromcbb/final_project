@@ -3,21 +3,20 @@
     src: url(../library/KGDarkSide.ttf);
 }
 
-
 body {
 	margin: 0;
     background-color: #edc884;
     font-family: 'Kg dark side';
 }
 
+a{
+    text-decoration: none;
+    margin: 10px;
+}
+
 .navigation {
 	background-color: rgba(255, 255, 255, 0.6);
 }
-
-a{
-    margin: none;
-}
-
 
 .navigationBar {
     background-color: rgba(255, 255, 255, 0.6);
@@ -37,9 +36,9 @@ a{
 }
 
 .icon {
-    height: 5vw;
+    height: 5vw;    
 }
-/*home nav*/
+
 #splashNav{
     justify-content: center;
     flex-wrap: wrap;
@@ -68,12 +67,6 @@ a{
 	margin: auto;
 }
 
-a{
-	text-decoration: none;
-	margin: 10px;
-}
-
-/*container*/
 #popRecipe {
     justify-content: center;
     flex-wrap: wrap;
@@ -117,7 +110,6 @@ button {
 	height: 3vw;
 	width: 18vw;
 }
-/*popular page*/
 
 .popimg{
 	border-radius: 50%;
@@ -141,16 +133,6 @@ button {
     padding-top: 2vw;
     margin-top: 2vw;
     margin-bottom: 2vw;
-}
-
-.header{
-	clear: right;
-	font-family: arial;
-}
-
-.description{
-	clear: right;
-	font-family: arial;
 }
 
 .custom{
@@ -185,6 +167,10 @@ footer{
 	margin-bottom: 2vw;
 }
 
+#custHead{
+  width: 100%;
+}
+
 .submitbtn{
 	border-radius: 10px;
 	background-color: #ffd77a;
@@ -192,17 +178,9 @@ footer{
 	box-shadow: 5px 5px 15px #000000;
   font-size: 1.5vw;
 }
-.flex.contain{
-    display: flex;
-    display: row wrap;
-}
 
 #splashHeader{
     width: 100%;
-}
-
-#custHead{
-  width: 100%;
 }
 
 #AboutApp{
