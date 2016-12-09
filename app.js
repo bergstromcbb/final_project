@@ -48,7 +48,7 @@ app.controller('enterFood', function($scope, recipeStore){
     var recipe = $scope.recipeData;
 
     var foodsToMatch = [recipe.protein, recipe.vegetable, recipe.starch];
-    
+
     recipeStore.setRecipe(foodsToMatch);
 
     console.log(foodsToMatch);
@@ -72,13 +72,14 @@ app.controller('displayFood', function($scope, recipeStore, $http){
 
   $http({
     method: 'GET',
-    url: 
-      "testInfo.json"
-    // 'https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/findByIngredients' + 
+
+    url:
+     "testInfo.json"
+    // 'https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/findByIngredients' +
     // '?fillIngredients=false&ingredients=' + encodeURIComponent(foodSearchString)  +'&limitLicense=false&number=5&ranking=1',
     // headers: {
     //  'X-Mashape-Key': "Qajqo1J4xdmshNRgkEbboXTYJFJYp19ne8jjsnq96e872bitro"
-    //   }
+      // }
   }).then(function successCallback(response) {
 
     document.body.className = 'ok';
@@ -93,11 +94,11 @@ app.controller('displayFood', function($scope, recipeStore, $http){
         id: recipe.id
       };
 
-      $scope.recipeArray.push(recipeObj);     
+      $scope.recipeArray.push(recipeObj);
       getRecipe(recipeObj.id);
     });
 
-  
+
     // $scope.entries = response.data.map(function(recipe){
     //   recipeId = recipe.id;
     //   getRecipe(recipeId);
@@ -116,10 +117,10 @@ app.controller('displayFood', function($scope, recipeStore, $http){
   function getRecipe(recipeId) {
     $http({
       method: "GET",
-      // url: 'https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/' + recipeId + '/information',
-      headers: {
-       // 'X-Mashape-Key': "Qajqo1J4xdmshNRgkEbboXTYJFJYp19ne8jjsnq96e872bitro"
-        }
+      //  url: 'https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/' + recipeId + '/information',
+      // headers: {
+        // 'X-Mashape-Key': "Qajqo1J4xdmshNRgkEbboXTYJFJYp19ne8jjsnq96e872bitro"
+        // }
     }).then(function successCallback(recipeJson) {
       var sourceUrl = recipeJson.data.sourceUrl;
       $scope.recipeArray.forEach(function(recipe) {
@@ -139,7 +140,7 @@ app.controller('displayJoke', function($scope, $http){
 
   $http({
     method: 'GET',
-    url: 
+    url:
     "testInfo.json"
   // 'https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/food/jokes/random',
   // headers: {
@@ -160,12 +161,12 @@ app.controller('displayRecipes', function($scope, $http){
 
   $http({
     method: 'GET',
-    url: 
-    "testInfo.json"
+    url:
+   "testInfo.json"
   // 'https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/random?limitLicense=false&number=5',
   // headers: {
   //  'X-Mashape-Key': "mB6qAXcS2dmshYvx3CSdxbUsZFbbp1qpWv1jsnGXmktEnkbIl4"
-  //   }
+    // }
  }).then(function successCallback(response) {
   document.body.className = 'ok';
   $scope.recipes = response.data.recipes.map(function(recipe){
@@ -187,4 +188,3 @@ app.controller('displayRecipes', function($scope, $http){
 });
 
 });
-

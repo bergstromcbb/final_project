@@ -3,21 +3,20 @@
     src: url(../library/KGDarkSide.ttf);
 }
 
-
 body {
 	margin: 0;
     background-color: #edc884;
     font-family: 'Kg dark side';
 }
 
+a{
+    text-decoration: none;
+    margin: 10px;
+}
+
 .navigation {
 	background-color: rgba(255, 255, 255, 0.6);
 }
-
-a{
-    margin: none;
-}
-
 
 .navigationBar {
     background-color: rgba(255, 255, 255, 0.6);
@@ -37,9 +36,9 @@ a{
 }
 
 .icon {
-    height: 5vw;
+    height: 5vw;    
 }
-/*home nav*/
+
 #splashNav{
     justify-content: center;
     flex-wrap: wrap;
@@ -68,12 +67,6 @@ a{
 	margin: auto;
 }
 
-a{
-	text-decoration: none;
-	margin: 10px;
-}
-
-/*container*/
 #popRecipe {
     justify-content: center;
     flex-wrap: wrap;
@@ -117,7 +110,6 @@ button {
 	height: 3vw;
 	width: 18vw;
 }
-/*popular page*/
 
 .popimg{
 	border-radius: 50%;
@@ -143,16 +135,6 @@ button {
     margin-bottom: 2vw;
 }
 
-.header{
-	clear: right;
-	font-family: arial;
-}
-
-.description{
-	clear: right;
-	font-family: arial;
-}
-
 .custom{
     background-color: rgba(255,255,255,0.7);
     border-radius: 25px;
@@ -164,16 +146,18 @@ button {
     margin-bottom: 2vw;
 }
 
-#instruction{
-	font-size: 2vw;
+footer{
+    font-size: 1vw;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.6);
 }
 
-footer{
-	font-size: 2vw;
-    text-align: center;
+::-webkit-input-placeholder{
+  font-size: 1vw;
 }
 
 .custom{
+  text-align: center;
 	border-radius: 25px;
 	width: 75%;
 	margin: auto;
@@ -183,20 +167,20 @@ footer{
 	margin-bottom: 2vw;
 }
 
+#custHead{
+  width: 100%;
+}
+
 .submitbtn{
 	border-radius: 10px;
 	background-color: #ffd77a;
 	border: 4px solid #ffe4a8;
-	box-shadow: 2.5px 2.5px 3px #c9c9c9;
-}
-.flex.contain{
-    display: flex; 
-    display: row wrap;
+	box-shadow: 5px 5px 15px #000000;
+  font-size: 1.5vw;
 }
 
 #splashHeader{
     width: 100%;
-
 }
 
 #AboutApp{
