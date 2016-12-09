@@ -1,14 +1,19 @@
 <div class="backgroundcust custdir">
 	<img id="custHead" src="images/resultsheader.jpg"/>
 
+<section class="ingredients">
+	<h2>
+		Ingredients you're using:</h2>
 
-	<h2>Ingredients you're using:</h2>
+	<h3>{{recipe[0]}}, {{recipe[1]}}, {{recipe[2]}}</h3>
+</section>
 
-	<p>{{recipe[0]}}, {{recipe[1]}}, {{recipe[2]}}</p>
-
+<section class="popular">
+	
 	<h2>Your recommended recipes are:</h2>
 
-	<div class="popular" id="popRecipe" ng-repeat="recipeInfo in recipeArray" id="popRecipe">
+
+	<div id="popRecipe" ng-repeat="recipeInfo in recipeArray">
 
 		<div class="leftColumn">
 		<a href="{{recipeInfo.sourceUrl}}"><img  class="popImage" src="{{recipeInfo.image}}">
@@ -19,28 +24,32 @@
 		</div>
 
 	</div>
-
+</section>
 </div>
+
 <footer class="navigation">
 	<div>
-		<a href="https://twitter.com/?request_context=signup">
+		<a target="_blank" href="http://www.apple.com/itunes/charts/free-apps/">
+			<img class="socialIcon" src="images/png/app-store.png">
+		</a>
+		<a target="_blank" href="https://twitter.com/RecipeCookApp">
 			<img class="socialIcon" src="images/png/twitter.png">
 		</a>
 
-		<a href="http://instagram.com">
+		<a target="_blank" href="https://www.instagram.com/recipecook/">
 			<img class="socialIcon" src="images/png/instagram.png">
 		</a>
 
-		<a href="http://www.facebook.com">
+		<a target="_blank" href="https://www.facebook.com/gary.circus.90">
 			<img class="socialIcon" src="images/png/facebook.png">
 		</a>
 
-		<a href="https://gmail.com">
+		<a href="mailto:recipecookapp@gmail.com">
 			<img class="socialIcon" src="images/png/google-plus.png">
 		</a>
 	</div>
 
-	<a href="Creaters.html"> Created by Cameron | Christina | Kyle | Simona </a>
+	<a target="_blank" href="Creaters.html"> Created by Cameron | Christina | Kyle | Simona </a>
 	<br>
 	&copy; RecipeCook 2016
 
