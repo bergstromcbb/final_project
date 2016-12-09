@@ -11,7 +11,19 @@
 			<img src="{{recipeInfo.image}}">
 		</a>
 	</div>
-	
+
+	<div ng-repeat="recipeInfo in recipeArray" id="popRecipe">
+
+		<div class="leftColumn">
+		<a href="{{recipeInfo.sourceUrl}}"><img src="{{recipeInfo.image}}">
+		</div>
+
+		<div class="rightColumn">
+			<h1>{{recipeInfo.title}}</h1></a>
+		</div>
+
+	</div>
+
 </div>
 <footer class="navigation">
 	<div>
@@ -37,4 +49,3 @@
 	&copy; RecipeCook 2016
 
 </footer>
-	
