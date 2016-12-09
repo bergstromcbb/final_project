@@ -1,4 +1,6 @@
 <div class="backgroundcust custdir">
+	<img id="custHead" src="images/resultsheader.jpg"/>
+
 
 	<h2>Ingredients you're using:</h2>
 
@@ -6,16 +8,10 @@
 
 	<h2>Your recommended recipes are:</h2>
 
-	<div ng-repeat="recipeInfo in recipeArray">
-		<a href="{{recipeInfo.sourceUrl}}">{{recipeInfo.title}}
-			<img src="{{recipeInfo.image}}">
-		</a>
-	</div>
-
-	<div ng-repeat="recipeInfo in recipeArray" id="popRecipe">
+	<div class="popular" id="popRecipe" ng-repeat="recipeInfo in recipeArray" id="popRecipe">
 
 		<div class="leftColumn">
-		<a href="{{recipeInfo.sourceUrl}}"><img src="{{recipeInfo.image}}">
+		<a href="{{recipeInfo.sourceUrl}}"><img  class="popImage" src="{{recipeInfo.image}}">
 		</div>
 
 		<div class="rightColumn">
