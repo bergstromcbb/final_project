@@ -11,7 +11,12 @@ body {
 
 a{
     text-decoration: none;
-    
+    color: #606060;
+    margin-right: 10px;    
+}
+
+a:hover{
+    color: #7c7c7c;
 }
 
 .navigation {
@@ -23,16 +28,6 @@ a{
     text-align: center;
     font-size: 2vw;
     padding-bottom: 16px;
-}
-
-.navigation a{
-    text-decoration: none;
-    color: #606060;
-    margin-right: 10px;
-}
-
-.navigation a:hover{
-    color: #7c7c7c;
 }
 
 .icon {
