@@ -31,7 +31,7 @@ a:active{
 .navigationBar {
     background-color: rgba(255, 255, 255, 0.6);
     text-align: center;
-    font-size: 2vw;
+    font-size: 4vw;
     padding-bottom: 16px;
 }
 
@@ -57,16 +57,17 @@ a:active{
     border-radius: 8px;
     text-align: center;
     color: #606060;
-    padding: 10px;
+    padding-bottom: 22px;
     list-style-type: none;
 }
 
 .column{
     width: 30%;
+    padding: 1.5vw;
 }
 
 .homebutt {
-    width: 70%;
+    width: 100%;
     border-radius: 50%;
 }
 
@@ -158,7 +159,8 @@ button {
 }
 
 footer{
-    font-size: 1vw;
+    font-size: 2vw;
+    font-family: avenir;
     text-align: center;
     background-color: rgba(255, 255, 255, 0.6);
     padding: 10px;
@@ -201,6 +203,7 @@ footer{
     text-align: center;
     margin: auto;
     font-size: 2.75vw;
+    font-family: avenir;
 }
 
 h1{
