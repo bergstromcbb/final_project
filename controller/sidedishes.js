@@ -122,8 +122,8 @@ app.controller('displayPairings', function($scope, $http){
     });
   }
 
-  setTimeout(function() {
-    console.log($scope.drinksArray);
-  }, 5000);
+  // setTimeout(function() {
+  //   console.log($scope.drinksArray);
+  // }, 5000);
 
 });
