@@ -1,8 +1,11 @@
 {
   "name": "recipecook",
   "version": "1.0.0",
-  "description": "",
+  "description": "recipecook app",
   "main": "app.js",
+  "scripts": {
+    "start": "node_modules/.bin/http-server -p $PORT"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/bergstromcbb/final_project.git"
