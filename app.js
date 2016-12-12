@@ -21,11 +21,12 @@ app.config(function($routeProvider) {
     templateUrl: "views/splash.html",
     controller:""
   });
+  $routeProvider.when("/creators", {
+    templateUrl: "views/creators.html",
+    controller:""
+  });
   $routeProvider.otherwise({
     redirectTo: "/splash"
   });
 
 });
-
-
-

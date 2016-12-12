@@ -2,6 +2,10 @@
     font-family: 'Kg dark side';
     src: url(../library/KGDarkSide.ttf);
 }
+@font-face{
+    font-family: 'raleway';
+    src: url(../library/raleway-regular.ttf);
+}
 
 body {
 	margin: 0;
@@ -12,7 +16,7 @@ body {
 a{
     text-decoration: none;
     color: #606060;
-    margin-right: 10px;    
+    margin-right: 10px;
 }
 
 a:hover{
@@ -112,6 +116,8 @@ ul {
 
 .leftColumn {
     width: 35%;
+    padding: 2vw;
+    margin: auto;
 }
 
 .rightColumn {
@@ -176,7 +182,7 @@ button {
 
 footer{
     font-size: 1.5vw;
-    font-family: avenir;
+    font-family: "raleway";
     text-align: center;
     background-color: rgba(255, 255, 255, 0.6);
     padding: 10px;
@@ -218,7 +224,7 @@ footer{
     text-align: center;
     margin: auto;
     font-size: 3.5vw;
-    font-family: avenir;
+    font-family: "raleway";
     text-shadow: 1px 1px 10px #606060;
 
 }
