@@ -5,7 +5,7 @@ app.controller('displayJoke', function($scope, $http){
     url:
   'https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/food/jokes/random',
   headers: {
-   'X-Mashape-Key': "Qajqo1J4xdmshNRgkEbboXTYJFJYp19ne8jjsnq96e872bitro"
+   'X-Mashape-Key': "mB6qAXcS2dmshYvx3CSdxbUsZFbbp1qpWv1jsnGXmktEnkbIl4"
      }
 
 }).then(function successCallback(response) {

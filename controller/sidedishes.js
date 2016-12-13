@@ -11,7 +11,7 @@ app.controller('displayPairings', function($scope, $http){
     'https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/search' +
     '?type=side+dish&limitLicense=false&number=5',
     headers: {
-     'X-Mashape-Key': "Qajqo1J4xdmshNRgkEbboXTYJFJYp19ne8jjsnq96e872bitro"
+     'X-Mashape-Key': "mB6qAXcS2dmshYvx3CSdxbUsZFbbp1qpWv1jsnGXmktEnkbIl4"
       }
   
   }).then(function successCallback(response) {
@@ -47,7 +47,7 @@ app.controller('displayPairings', function($scope, $http){
     'https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/search' +
     '?type=dessert&limitLicense=false&number=5',
     headers: {
-     'X-Mashape-Key': "Qajqo1J4xdmshNRgkEbboXTYJFJYp19ne8jjsnq96e872bitro"
+     'X-Mashape-Key': "mB6qAXcS2dmshYvx3CSdxbUsZFbbp1qpWv1jsnGXmktEnkbIl4"
       }
   
   }).then(function successCallback(response) {
@@ -83,7 +83,7 @@ app.controller('displayPairings', function($scope, $http){
     'https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/search' +
     '?type=drink&limitLicense=false&number=5',
     headers: {
-     'X-Mashape-Key': "Qajqo1J4xdmshNRgkEbboXTYJFJYp19ne8jjsnq96e872bitro"
+     'X-Mashape-Key': "TdZaGg4EqomshnhTijbPEVMKcxAGp1ph81AjsnkQ8nsV88618i"
       }
   
   }).then(function successCallback(response) {
@@ -114,7 +114,7 @@ app.controller('displayPairings', function($scope, $http){
       method: "GET",
        url: 'https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/' + recipe.id + '/information',
       headers: {
-        'X-Mashape-Key': "Qajqo1J4xdmshNRgkEbboXTYJFJYp19ne8jjsnq96e872bitro"
+        'X-Mashape-Key': "TdZaGg4EqomshnhTijbPEVMKcxAGp1ph81AjsnkQ8nsV88618i"
         }
     }).then(function successCallback(recipeJson) {
       var sourceUrl = recipeJson.data.sourceUrl;
