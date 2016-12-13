@@ -16,7 +16,9 @@
   "homepage": "https://github.com/bergstromcbb/final_project#readme",
   "devDependencies": {
     "browser-sync": "^2.18.2",
-    "express": "^4.14.0",
     "gulp": "^3.9.1"
+  },
+   "dependencies": {
+    "express": "^4.14.0"
   }
 }
