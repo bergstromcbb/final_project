@@ -24,6 +24,10 @@ body {
     font-family: raleway;
 }
 
+.centernav{
+  margin: 0;
+}
+
 .pairingHeader {
     font-size: 3.5vw;
 }
@@ -263,7 +267,6 @@ h3{
   }
 
 .flip-container, .front, .back {
-  min-width: 320px;
   width: 100%;
   min-height: 25vw;
 /*  border-radius: 50%;*/
@@ -296,8 +299,9 @@ h3{
 /* back, initially hidden pane */
 .back {
   transform: rotateY(180deg);
-  background-color: white;
+  background-color: #606060;
   width: 100%;
+  color:white;
   border-radius: 50%;
 }
 
@@ -312,7 +316,7 @@ h3{
   display: inline-block;
   vertical-align: middle;
   -webkit-transform: perspective(1px) translateZ(0);
-  transform: perspective(1px) translateZ(0);
+  transform: perspective(px) translateZ(0);
   box-shadow: 0 0 1px transparent;
   position: relative;
   overflow: hidden;
