@@ -14,3 +14,5 @@ app.controller('enterFood', function($scope, recipeStore){
   };
 
 });
+
+//goes with display food
