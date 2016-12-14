@@ -256,6 +256,10 @@ h3{
     font-size: 2.5vw;
 }
 
+h2{
+  font-size: 3vw;
+}
+
 
 /* entire container, keeps perspective */
 .flip-container {
@@ -329,7 +333,8 @@ h3{
   right: 50%;
   bottom: 0;
   background: #3b61b6;
-  height: 3px;
+  height: .18vw;
+  margin: .35vw;
   -webkit-transition-property: left, right;
   transition-property: left, right;
   -webkit-transition-duration: 0.3s;
@@ -342,6 +347,9 @@ h3{
   right: 0;
 }
 
+.leftpair {
+  padding: 1vw;
+}
 
 /* Grow Shadow */
 .hvr-grow-shadow {
