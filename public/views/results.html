@@ -1,56 +1,56 @@
 <div class="backgroundcust custdir">
 	<img id="custHead" src="images/resultsheader.jpg"/>
 
-<section class="ingredients">
-	<h2 id="instruction">Ingredients you're using:</h2>
+	<section class="ingredients">
+		<h2 id="instruction">Ingredients you're using:</h2>
 
-	<h3>{{recipe[0]}}, {{recipe[1]}}, {{recipe[2]}}</h3>
-</section>
+		<h3>{{recipe[0]}}, {{recipe[1]}}, {{recipe[2]}}</h3>
+	</section>
 
-<section class="popular">
+	<section class="popular">
 
-	<h2 id="instruction">Your recommended recipes are:</h2>
+		<h2 id="instruction">Your recommended recipes are:</h2>
 
 
-	<div id="popRecipe" ng-repeat="recipeInfo in recipeArray">
+		<div id="popRecipe" ng-repeat="recipeInfo in recipeArray">
 
-		<div class="leftColumn">
-		<a href="{{recipeInfo.sourceUrl}}"><img  class="popImage" src="{{recipeInfo.image}}">
-		</div>
+			<div class="leftColumn">
+				<a href="{{recipeInfo.sourceUrl}}"><img  class="popImage" src="{{recipeInfo.image}}">
+				</div>
 
-		<div class="rightColumn">
-			<h1>{{recipeInfo.title}}</h1></a>
-		</div>
+				<div class="rightColumn">
+					<h1>{{recipeInfo.title}}</h1></a>
+				</div>
 
-	</div>
-</section>
-</div>
-
-<footer>
-	<div>
-		<a class="hvr-grow-shadow" target="_blank" href="https://twitter.com/RecipeCookApp">
-			<img class="socialIcon" src="images/png/twitter.png">
-		</a>
-
-		<a class="hvr-grow-shadow" target="_blank" href="https://www.instagram.com/recipecook/">
-			<img class="socialIcon" src="images/png/instagram.png">
-		</a>
-
-		<a class="hvr-grow-shadow" href="mailto:recipecookapp@gmail.com">
-			<img class="socialIcon" src="images/png/google-plus.png">
-		</a>
-
-		<a class="hvr-grow-shadow" target="_blank" href="https://www.facebook.com/gary.circus.90">
-			<img class="socialIcon" src="images/png/facebook.png">
-		</a>
-
-		<a class="hvr-grow-shadow" target="_blank" href="http://www.apple.com/itunes/charts/free-apps/">
-			<img class="socialIcon" src="images/png/app-store.png">
-		</a>
+			</div>
+		</section>
 	</div>
 
-	<a target="_blank" href="#/creators"> Created by Cameron | Christina | Kyle | Simona </a>
-	<br>
-	&copy; RecipeCook 2016
+	<footer>
+		<div>
+			<a class="hvr-grow-shadow" target="_blank" href="https://twitter.com/RecipeCookApp">
+				<img class="socialIcon" src="images/png/twitter.png">
+			</a>
 
-</footer>
+			<a class="hvr-grow-shadow" target="_blank" href="https://www.instagram.com/recipecook/">
+				<img class="socialIcon" src="images/png/instagram.png">
+			</a>
+
+			<a class="hvr-grow-shadow" href="mailto:recipecookapp@gmail.com">
+				<img class="socialIcon" src="images/png/google-plus.png">
+			</a>
+
+			<a class="hvr-grow-shadow" target="_blank" href="https://www.facebook.com/gary.circus.90">
+				<img class="socialIcon" src="images/png/facebook.png">
+			</a>
+
+			<a class="hvr-grow-shadow" target="_blank" href="http://www.apple.com/itunes/charts/free-apps/">
+				<img class="socialIcon" src="images/png/app-store.png">
+			</a>
+		</div>
+
+		<a target="_blank" href="#/creators"> Created by Cameron | Christina | Kyle | Simona </a>
+		<br>
+		&copy; RecipeCook 2016
+
+	</footer>
