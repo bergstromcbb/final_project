@@ -81,7 +81,7 @@ app.controller('displayPairings', function($scope, $http){
     url:
 
     'https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/search' +
-    '?type=drink&limitLicense=false&number=5',
+    '?type=beverage&limitLicense=false&number=5',
     headers: {
      'X-Mashape-Key': "Qajqo1J4xdmshNRgkEbboXTYJFJYp19ne8jjsnq96e872bitro"
       }
