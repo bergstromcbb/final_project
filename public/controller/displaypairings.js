@@ -11,7 +11,7 @@ app.controller('displayPairings', function($scope, $http){
     'https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/search' +
     '?type=side+dish&limitLicense=false&number=5',
     headers: {
-     'X-Mashape-Key': "Qajqo1J4xdmshNRgkEbboXTYJFJYp19ne8jjsnq96e872bitro"
+     'X-Mashape-Key': "s7lPANmVf2mshISy3FcMvQFPT1nzp1lPKC5jsnQfQg2RcSHwN4"
       }
   
   }).then(function successCallback(response) {
