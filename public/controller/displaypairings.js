@@ -8,7 +8,7 @@ app.controller('displayPairings', function($scope, $http){
 
     url:
 
-    'https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/search' +
+    'https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/search' +
     '?type=side+dish&limitLicense=false&number=5',
     headers: {
      'X-RapidAPI-Key': "ETHlj27adGmshsXAuXTQc2S3AKkhp1Gi1PFjsnkwEfcnz6vDPS"
