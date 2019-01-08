@@ -6,7 +6,7 @@ app.controller('displayRecipes', function($scope, $http){
 
   'https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/random?limitLicense=false&number=5',
   headers: {
-   'X-Mashape-Key': "Qajqo1J4xdmshNRgkEbboXTYJFJYp19ne8jjsnq96e872bitro"
+   'X-Mashape-Key': "TdZaGg4EqomshnhTijbPEVMKcxAGp1ph81AjsnkQ8nsV88618i"
     }
 
  }).then(function successCallback(response) {
