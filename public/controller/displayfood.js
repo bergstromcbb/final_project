@@ -18,7 +18,7 @@ app.controller('displayFood', function($scope, recipeStore, $http){
     'https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/findByIngredients' +
     '?fillIngredients=false&ingredients=' + encodeURIComponent(foodSearchString)  +'&limitLicense=false&number=5&ranking=1',
     headers: {
-     'X-Mashape-Key': "TdZaGg4EqomshnhTijbPEVMKcxAGp1ph81AjsnkQ8nsV88618i"
+     'X-Mashape-Key': "Qajqo1J4xdmshNRgkEbboXTYJFJYp19ne8jjsnq96e872bitro"
       }
   
   }).then(function successCallback(response) {
